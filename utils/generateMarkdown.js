@@ -47,37 +47,39 @@ function renderLicenseSection(license) {
 function generateMarkdown(data) {
   const licenseBadge = renderLicenseBadge(data.license);
   const licenseSection = renderLicenseSection(data.license);
-  const questionsSection = `## Questions
-- **Email:** ${data.email}
-- **GitHub Username:** ${data.userName}`
 
   return `# ${data.title} 
   ${licenseBadge}
+  ${licenseSection}
 
 ## Description
 ${data.description}
 
 ## Table of Contents:
-  ###  * [Installation](#installation)
-  ###  * [Usage](#usage)
-  ###  * [License](#license)
-  ###  * [Contributors](#contributors)
-  ###  * [Tests](#tests)
-  ###  * [Questions](#questions)
+  [Installation](#installation)
+  [Usage](#usage)
+  [License](#license)
+    [Contributors](#contributors)
+    [Tests](#tests)
+    [Questions](#questions)
 
   ## Installation:
-  ### You must install the following for this app to function:
-  ### ${data.installation}
+  ${data.installation}
 
   ## Usage:
   ### ${data.usage}
 
   ## Contributors:
-  ### ${data.contributions}
+  ${data.contributions}
 
-  ## Tests:
-  ### Run the following commands in your terminal to test this app:
-  ### ${data.tests}
+  ## Tests: 
+  ${data.tests}
+
+  ## Questions:
+  ### If you have any questions, you may contact me at either
+  ### Github: https://github.com/${data.askMe}
+  ### or
+  ### Email: ${data.email}
 `;
 }
 

@@ -43,7 +43,7 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'gitHib',
+        name: 'gitHub',
         message: 'What is your Github username?',
     },
     {
@@ -66,9 +66,9 @@ function writeToFile(fileName, data) {
 // TODO: Create a function to initialize app
 function init() {
     inquirer.prompt(questions)
-        .then((answers) => {
-            const markdownContent = generateMarkdown(answers);
-            const fileName = 'PRO-README-GEN.md';
+        .then((data) => {
+            const markdownContent = generateMarkdown(data);
+            const fileName = 'GeneratedReadME.md';
             writeToFile(fileName, markdownContent);
         })
         .catch((error) => {
