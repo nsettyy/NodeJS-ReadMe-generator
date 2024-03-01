@@ -129,7 +129,16 @@ const questions = [
 function writeToFile(fileName, data) {}
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+    inquirer
+        .prompt(questions)
+        .then((answers) => {
+            const markDownContent = generateMarkdown(answers);
+            fs.writeFile('README.md', markDownContent, (err) =>
+                err ? console.log(err) : console.log('The README.md file has been updated.')
+            )
+        });
+}
 
 // Function call to initialize app
 init();
