@@ -22,7 +22,7 @@ const questions = [
         type: 'list',
         name: 'license',
         message: 'What liscenese did you use for this project?',
-        choices: ['None', 'MIT', 'GNU General Public Liscense v3.0', 'Apache 2.0'],
+        choices: ['None', 'MIT', 'GPL v3.0', 'Apache 2.0'],
         alidate: licenseInput => {
             if (licenseInput) {
                 return true;
