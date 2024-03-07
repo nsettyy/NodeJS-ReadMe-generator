@@ -67,7 +67,7 @@ ${data.description}
   ${data.installation}
 
   ## Usage:
-  ### ${data.usage}
+  ${data.usage}
 
   ## Contributors:
   ${data.contributions}
