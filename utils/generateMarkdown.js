@@ -47,21 +47,21 @@ function renderLicenseSection(license) {
 function generateMarkdown(data) {
   const licenseBadge = renderLicenseBadge(data.license);
   const licenseSection = renderLicenseSection(data.license);
+  const licenseLink = renderLicenseLink(data.license);
 
   return `# ${data.title} 
   ${licenseBadge}
-  ${licenseSection}
 
 ## Description
 ${data.description}
 
 ## Table of Contents:
-  [Installation](#installation)
-  [Usage](#usage)
-  [License](#license)
-    [Contributors](#contributors)
-    [Tests](#tests)
-    [Questions](#questions)
+  * [Installation](#installation)
+  * [Usage](#usage)
+  * [Contributors](#contributors)
+  * [Tests](#tests)
+  * [Questions](#questions)
+  * [License](#license)
 
   ## Installation:
   ${data.installation}
@@ -76,10 +76,13 @@ ${data.description}
   ${data.tests}
 
   ## Questions:
-  ### If you have any questions, you may contact me at either
-  ### Github: https://github.com/${data.askMe}
-  ### or
-  ### Email: ${data.email}
+  If you have any questions, you may contact me at either
+  Github: https://github.com/${data.askMe}
+  or
+  Email: ${data.email}
+
+  ## Liscense
+  Here is a [link](${licenseLink}) to the license I used.
 `;
 }
 
