@@ -76,12 +76,9 @@ ${data.description}
   ${data.tests}
 
   ## Questions:
-  If you have any questions, you may contact me at either
-  Github: https://github.com/${data.askMe}
-  or
-  Email: ${data.email}
+  If you have any questions, you may contact me at either Github: https://github.com/${data.askMe} or Email: ${data.email}
 
-  ## Liscense
+  ## ${licenseSection} ${licenseBadge}
   Here is a [link](${licenseLink}) to the license I used.
 `;
 }
